@@ -1,0 +1,2 @@
+debian/bin/Axelcoind usr/bin
+src/Axelcoind usr/lib/Axelcoin

@@ -1,0 +1,9 @@
+Building Axelcoin
+
+See doc/readme-qt.rst for instructions on building Axelcoin QT,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of Axelcoin.
+
+See doc/build-*.txt for instructions on building Axelcoind,
+the intended-for-services, no-graphical-interface, reference
+implementation of Axelcoin.
