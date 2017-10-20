@@ -16,7 +16,7 @@ INSTALL THE Axelcoin QT WALLET (LINUX)
 Open the Terminal either from the Unity Menu or by pressing Ctrl+Alt+T.
 
 In the terminal type: 
-
+sudo apt-get install libqt4-dev libminiupnpc-dev
 sudo apt-get install build-essential libboost-all-dev libcurl4-openssl-dev libdb5.1-dev libdb5.1++-dev qt5-default qttools5-dev-tools qt-sdk make qrencode libqrencode-dev 
 
 and hit return/enter.
