@@ -2598,11 +2598,11 @@ bool LoadBlockIndex(bool fAllowNew)
         block.nVersion = 1;
         block.nTime    = 1508504538;
         block.nBits    = bnProofOfWorkLimit.GetCompact();
-        block.nNonce   = 8972172;
+        block.nNonce   = 0;
 
 
 
-       if (false && (block.GetHash() != hashGenesisBlock)) {
+       if (true && (block.GetHash() != hashGenesisBlock)) {
                 block.nNonce = 0;
 
                 // This will figure out a valid hash and Nonce if you're
@@ -2629,7 +2629,7 @@ bool LoadBlockIndex(bool fAllowNew)
         printf("block.nTime = %u \n", block.nTime);
         printf("block.nNonce = %u \n", block.nNonce);
 
-        assert(block.hashMerkleRoot == uint256("0x3f65cf092b5e2f44c5378c3b293b0360f93627c332b2e486514f3c4e882d1f8e"));
+        assert(block.hashMerkleRoot == uint256("0x"));
 
 
 	    block.print();
