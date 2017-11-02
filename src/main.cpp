@@ -51,7 +51,7 @@ unsigned int nStakeMinAge = 1 * 60 * 60; // 12 hours
 unsigned int nStakeMaxAge =  60 * 60 * 24 * 3;  // 3 day
 unsigned int nModifierInterval = 10 * 60; // Axelcoin - time to elapse before new modifier is computed
 
-int nCoinbaseMaturity = 100;
+int nCoinbaseMaturity = 50;
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
 
@@ -2586,7 +2586,7 @@ bool LoadBlockIndex(bool fAllowNew)
 
         const char* pszTimestamp = "AXL for Axelcoin ? 6th-June-2017";
         CTransaction txNew;
-        txNew.nTime = 1508504538;
+        txNew.nTime = 1509636478;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 0 << CBigNum(42) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
@@ -2596,9 +2596,9 @@ bool LoadBlockIndex(bool fAllowNew)
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1508504538;
+        block.nTime    = 1509636478;
         block.nBits    = bnProofOfWorkLimit.GetCompact();
-        block.nNonce   = 8972172;
+        block.nNonce   = 5845187;
 
 
 
@@ -2629,7 +2629,7 @@ bool LoadBlockIndex(bool fAllowNew)
         printf("block.nTime = %u \n", block.nTime);
         printf("block.nNonce = %u \n", block.nNonce);
 
-        assert(block.hashMerkleRoot == uint256("0x3f65cf092b5e2f44c5378c3b293b0360f93627c332b2e486514f3c4e882d1f8e"));
+        assert(block.hashMerkleRoot == uint256("0x4191e458524dcc29546fbb746229c5c8f7ef0182110d848e2e590b01bba439d2"));
 
 
 	    block.print();
