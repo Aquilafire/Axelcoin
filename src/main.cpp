@@ -39,7 +39,7 @@ set<pair<COutPoint, unsigned int> > setStakeSeen;
 libzerocoin::Params* ZCParams;
 
 CBigNum bnProofOfWorkLimit(~uint256(0) >> 24); // 0,000244140625 proof-of-work difficulty starting - test modification from 20 to 24 for higher starting POW diff 0.00390625
-CBigNum bnProofOfStakeLimit(~uint256(0) >> 20);
+CBigNum bnProofOfStakeLimit(~uint256(0) >> 200);
 CBigNum bnProofOfWorkLimitTestNet(~uint256(0) >> 16);
 
 static const int64_t nTargetTimespan = 15 * 30;  // 7m
