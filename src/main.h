@@ -31,7 +31,7 @@ class CRequestTracker;
 class CNode;
 
 
-static const unsigned int MAX_BLOCK_SIZE = 4000000;
+static const unsigned int MAX_BLOCK_SIZE = 1500000;
 static const unsigned int MAX_BLOCK_SIZE_GEN = MAX_BLOCK_SIZE/2;
 static const unsigned int MAX_BLOCK_SIGOPS = MAX_BLOCK_SIZE/50;
 static const unsigned int MAX_ORPHAN_TRANSACTIONS = MAX_BLOCK_SIZE/100;
@@ -53,7 +53,7 @@ static const int fHaveUPnP = true;
 #else
 static const int fHaveUPnP = false;
 #endif
-static const uint256 hashGenesisBlock("0x0000001164cbf236e601e9a1c7ba83395dc4fca1805da3eae007bc1e1349a0ec");
+static const uint256 hashGenesisBlock("0x000000d981041a32aef994346e5c21d636fb990007b200eea91d2846020b09cd");
 static const uint256 hashGenesisBlockTestNet("");
 
 inline int64_t PastDrift(int64_t nTime)   { return nTime - 5 * 60; } // up to 5 minutes from the past   - down from 10 for security
