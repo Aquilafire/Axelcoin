@@ -2599,29 +2599,7 @@ bool LoadBlockIndex(bool fAllowNew)
         block.nTime    = 1514228979;
         block.nBits    = bnProofOfWorkLimit.GetCompact();
         block.nNonce   = 12099157;
-
-
-
-       if (false && (block.GetHash() != hashGenesisBlock)) {
-                block.nNonce = 0;
-
-                // This will figure out a valid hash and Nonce if you're
-                // creating a different genesis block:
-                uint256 hashTarget = CBigNum().SetCompact(block.nBits).getuint256();
-                while (block.GetHash() > hashTarget)
-                {
-                    ++block.nNonce;
-                    if (block.nNonce == 0)
-                    {
-                        printf("NONCE WRAPPED, incrementing time");
-                        ++block.nTime;
-                    }
-                     if (block.nNonce % 10000 == 0)
-                     {
-                         printf("nonce %08u: hash = %s \n", block.nNonce, block.GetHash().ToString().c_str());
-                     }
-                }
-            }
+      
 
         block.print();
         printf("block.GetHash() == %s\n", block.GetHash().ToString().c_str());
@@ -2632,7 +2610,7 @@ bool LoadBlockIndex(bool fAllowNew)
         assert(block.hashMerkleRoot == uint256("0x174aebd9ac1ba0ad469ca7f0b4a995520dd335c4549bf2e86ca53215bff802bb"));
 
 
-	    block.print();
+	block.print();
         assert(block.GetHash() == (!fTestNet ? hashGenesisBlock : hashGenesisBlockTestNet));
         assert(block.CheckBlock());
 
