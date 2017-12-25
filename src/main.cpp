@@ -987,7 +987,7 @@ int64_t GetProofOfWorkReward(int64_t nFees)
  
     if(pindexBest->nHeight < 1)
         {
-            nSubsidy = 15000000 * COIN;
+            nSubsidy = 4000000 * COIN;
         }
 	    else if(pindexBest->nHeight < 201)
     	{
@@ -2586,7 +2586,7 @@ bool LoadBlockIndex(bool fAllowNew)
 
         const char* pszTimestamp = "AXL for Axelcoin ? 6th-June-2017";
         CTransaction txNew;
-        txNew.nTime = 1509636478;
+        txNew.nTime = 1514220718;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 0 << CBigNum(42) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
@@ -2596,9 +2596,9 @@ bool LoadBlockIndex(bool fAllowNew)
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1509636478;
+        block.nTime    = 1514220718;
         block.nBits    = bnProofOfWorkLimit.GetCompact();
-        block.nNonce   = 5845187;
+        block.nNonce   = 9123352;
 
 
 
@@ -2629,7 +2629,7 @@ bool LoadBlockIndex(bool fAllowNew)
         printf("block.nTime = %u \n", block.nTime);
         printf("block.nNonce = %u \n", block.nNonce);
 
-        assert(block.hashMerkleRoot == uint256("0x4191e458524dcc29546fbb746229c5c8f7ef0182110d848e2e590b01bba439d2"));
+        assert(block.hashMerkleRoot == uint256("0x171e223d9b80aa568b58e065f615ebc2575c2a226372701a4d930bb5455bb8f4"));
 
 
 	    block.print();
