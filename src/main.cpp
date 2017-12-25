@@ -2584,7 +2584,7 @@ bool LoadBlockIndex(bool fAllowNew)
 
 
 
-        const char* pszTimestamp = "AXL for Axelcoin ? 6th-June-2017";
+        const char* pszTimestamp = "AXL for Axelcoin ?";
         CTransaction txNew;
         txNew.nTime = 1514220718;
         txNew.vin.resize(1);
